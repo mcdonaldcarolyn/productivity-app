@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, { Component } from 'react';
-import TodoCard from './Components/TodoCard';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Notes from './pages/Notes.js';
+import Create from './pages/Create.js';
+import TodoCard from './Components/todo/TodoCard';
 import { Header } from './Components/Header';
 import { Timer } from './Components/Timer';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#fefefe'
+    },
+    
+  },
+  typography: {
+    fontFamily: 'Quicksand',
+    fontWeightLight: 400,
+    fontWeightRegular: 500,
+    fontWeightMedium: 600,
+    fontWeightBold: 700,
+  }
+})
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <Header/>
-        <TodoCard />
-        <Timer/>
-        <p>
-          Let's make a producitivity app super fun
-        </p>``
-        
-      </header>
-      
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header/>
+      <Router>
+        <Switch>
+          
+          <Route exact path='/'>
+            
+            <Notes/>
+          </Route>
+          <Route path='/create'>
+            <Create/>
+          </Route>
+        </Switch>
+      </Router>
+     </ThemeProvider>
   );
 }
 
