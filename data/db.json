@@ -1,20 +1,28 @@
 {
   "notes": [
-    { "title": "work on todolist",
+    {
+      "title": "work on todolist",
       "details": "so much to do",
       "category": "work",
       "id": 1
     },
-    { "title":"House to do",
+    {
+      "title": "House to do",
       "details": "clean it all",
       "category": "House",
       "id": 2
     },
-    { "title":"Learning to do",
+    {
+      "title": "Learning to do",
       "details": "Learn it all",
       "category": "Brain",
       "id": 3
+    },
+    {
+      "title": "House renovation",
+      "details": "order everything",
+      "category": "reminders",
+      "id": 4
     }
   ]
-
 }

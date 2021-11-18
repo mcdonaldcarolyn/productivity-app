@@ -7,8 +7,8 @@ import Create from './pages/Create.js';
 import TodoCard from './Components/todo/TodoCard';
 import { Header } from './Components/Header';
 import { Timer } from './Components/Timer';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/private-theming';
 const theme = createTheme({
   palette: {
     primary: {
