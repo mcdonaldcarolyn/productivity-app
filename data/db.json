@@ -23,6 +23,18 @@
       "details": "order everything",
       "category": "reminders",
       "id": 4
+    },
+    {
+      "title": "Jeff is cool",
+      "details": "cause i love him",
+      "category": "work",
+      "id": 5
+    },
+    {
+      "title": "Mady is the best ",
+      "details": "Tell Mady I love her",
+      "category": "reminders",
+      "id": 7
     }
   ]
 }

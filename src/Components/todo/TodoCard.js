@@ -11,15 +11,25 @@ import  CardHeader  from '@mui/material/CardHeader';
 import  IconButton  from '@mui/material/IconButton';
 import CardContent from '@mui/material/CardContent';
 
+const useStyles = makeStyles({
+  test: {
+    border: (note) => {
+      if (note.category == 'work') {
+        return '1px solid red'
+      }
+    }
+  }
+})
+
 export default function TodoCard({ note, handleDelete }) {
-  
+  const classes = useStyles(note)
   return (
     <div>
       <Card elevation={1}>
         <CardHeader
           action={
             <IconButton onClick={() => handleDelete(note.id)}>
-              
+              delete
             </IconButton>
         }
           title={note.title}
