@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import Card from '@mui/material/Card';
 import Typography  from '@mui/material/Typography';
 import { CheckboxComponent } from '../CheckboxComponent';
@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import  CardHeader  from '@mui/material/CardHeader';
 import  IconButton  from '@mui/material/IconButton';
 import CardContent from '@mui/material/CardContent';
+import Checkbox from '@mui/material/Checkbox';
 
 const useStyles = makeStyles({
   test: {
@@ -23,6 +24,11 @@ const useStyles = makeStyles({
 
 export default function TodoCard({ note, handleDelete }) {
   const classes = useStyles(note)
+  const [checked, setChecked] = useState([true]);
+
+  const toggleCheckbox = event => {
+    setChecked(event.target.checked)
+  }
   return (
     <div>
       <Card elevation={1}>
@@ -35,7 +41,12 @@ export default function TodoCard({ note, handleDelete }) {
           title={note.title}
           subheader={note.category}
         />
+        
         <CardContent>
+          <Checkbox
+          checked={checked}
+          onChange= {toggleCheckbox}
+        />
           <Typography variant="body2" color="textSecondary">
             { note.details }
           </Typography>

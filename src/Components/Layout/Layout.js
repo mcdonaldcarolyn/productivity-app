@@ -23,8 +23,13 @@ const useStyles = makeStyles((theme) => {
     root: {
       display: 'flex',
     },
+    appBar: {
+      width: '80%',
+      marginLeft: drawerWidth,
+    },
     drawer: {
       width: drawerWidth,
+      flexShrink: 0,
     },
     drawerPaper: {
       width: drawerWidth,
@@ -35,10 +40,7 @@ const useStyles = makeStyles((theme) => {
     title: {
       padding: theme.spacing(2),
     },
-    appBar: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
+    
     date: {
       flexGrow: 1
     },
