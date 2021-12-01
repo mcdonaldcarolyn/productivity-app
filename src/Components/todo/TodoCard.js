@@ -45,7 +45,7 @@ export default function TodoCard({ note, handleDelete }) {
         <CardContent>
           <Checkbox
           checked={checked}
-          onChange= {toggleCheckbox}
+          onChange= {toggleCheckbox} name = {note.details}
         />
           <Typography variant="body2" color="textSecondary">
             { note.details }
