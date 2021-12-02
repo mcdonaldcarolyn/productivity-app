@@ -35,6 +35,15 @@
       "details": "Tell Mady I love her",
       "category": "reminders",
       "id": 7
+    },
+    {
+      "title": "holidays",
+      "details": "figure it all out",
+      "category": "todos",
+      "checked": [
+        true
+      ],
+      "id": 8
     }
   ]
 }

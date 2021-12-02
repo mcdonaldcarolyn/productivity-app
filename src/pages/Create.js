@@ -11,7 +11,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { useHistory } from 'react-router-dom';
-//import Checkbox from '@mui/material/Checkbox';
+import Checkbox from '@mui/material/Checkbox';
 
 const useStyles = makeStyles({
 
@@ -30,7 +30,10 @@ export default function Create() {
   const [titleError, setTitleError] = useState(false)
   const [detailsError, setDetailsError] = useState(false)
   const [category, setCategory] = useState('money')
-  
+  const [checked, setChecked] = useState([false]);
+  const toggleCheckbox = event => {
+    setChecked(event.target.checked)
+  }
   const handleSubmit = (e) => {
     e.preventDefault()
     setTitleError(false)
@@ -46,7 +49,7 @@ export default function Create() {
       fetch('http://localhost:8000/notes', {
         method: 'POST',
         headers: { "Content-type": "application/json" },
-        body: JSON.stringify({ title, details, category })
+        body: JSON.stringify({ title, details, category, checked })
       }).then(() => history.push('/'))
     }
   }
