@@ -11,6 +11,7 @@ import  CardHeader  from '@mui/material/CardHeader';
 import  IconButton  from '@mui/material/IconButton';
 import CardContent from '@mui/material/CardContent';
 import Checkbox from '@mui/material/Checkbox';
+import {FormControlLabel } from '@mui/material';
 
 const useStyles = makeStyles({
   test: {
@@ -25,7 +26,10 @@ const useStyles = makeStyles({
 export default function TodoCard({ note, handleDelete }) {
   const classes = useStyles(note)
   const [checked, setChecked] = useState([true]);
-
+  const handleChange = (event) => {
+    setChecked([event.target.checked, checked[1]])
+  }
+    
   const toggleCheckbox = event => {
     setChecked(event.target.checked)
   }
@@ -43,12 +47,16 @@ export default function TodoCard({ note, handleDelete }) {
         />
         
         <CardContent>
+          <FormControlLabel
+            label={note.detail}
+            control={<Checkbox checked={checked[0]} onChange={ handleChange}/>}
+          />
           <Checkbox
           checked={checked}
-          onChange= {toggleCheckbox} name = {note.details}
+          onChange={toggleCheckbox} name= {note.details}
         />
           <Typography variant="body2" color="textSecondary">
-            { note.details }
+            
           </Typography>
           </CardContent>
         
