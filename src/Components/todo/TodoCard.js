@@ -49,13 +49,10 @@ export default function TodoCard({ note, handleDelete }) {
         
         <CardContent>
           <FormControlLabel
-            label= "item"
+            label= {note.details}
             control={<Checkbox checked={checked[0]} onChange={ handleChange}/>}
           />
-          <Checkbox
-          checked={checked}
-          onChange={toggleCheckbox} name= {note.details}
-        />
+         
           <Typography variant="body2" color="textSecondary">
             
           </Typography>
