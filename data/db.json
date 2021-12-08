@@ -37,11 +37,11 @@
       "id": 7
     },
     {
-      "title": "holidays",
-      "details": "figure it all out",
+      "title": "Design all of the kitchen",
+      "details": "Finalize it all \n",
       "category": "todos",
       "checked": [
-        true
+        false
       ],
       "id": 8
     }

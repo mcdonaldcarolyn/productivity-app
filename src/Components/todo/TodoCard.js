@@ -8,7 +8,8 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
 import  CardHeader  from '@mui/material/CardHeader';
-import  IconButton  from '@mui/material/IconButton';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 import CardContent from '@mui/material/CardContent';
 import Checkbox from '@mui/material/Checkbox';
 import {FormControlLabel } from '@mui/material';
@@ -38,8 +39,8 @@ export default function TodoCard({ note, handleDelete }) {
       <Card elevation={1}>
         <CardHeader
           action={
-            <IconButton onClick={() => handleDelete(note.id)}>
-              delete
+            <IconButton onClick={() => handleDelete(note.id)} aria-label= "delete">
+              <DeleteIcon />
             </IconButton>
         }
           title={note.title}
