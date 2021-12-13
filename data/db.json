@@ -44,6 +44,24 @@
         false
       ],
       "id": 8
+    },
+    {
+      "title": "production app ",
+      "details": "add more details \nmake it so you can pull one card ",
+      "category": "work",
+      "checked": [
+        false
+      ],
+      "id": 9
+    },
+    {
+      "title": "house stuff",
+      "details": "put it all away",
+      "category": "todos",
+      "checked": [
+        false
+      ],
+      "id": 10
     }
   ]
 }

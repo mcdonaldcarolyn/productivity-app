@@ -84,6 +84,17 @@ export default function Create() {
           required
           error={detailsError}
         />
+        <TextField className={classes.field}
+          onChange={(e) => setDetails(e.target.value)}
+          label="Details"
+          variant="outlined"
+          color="secondary"
+          multiline
+          rows={4}
+          fullWidth
+          required
+          error={detailsError}
+        />
         <FormControl className={classes.field}>
           <FormLabel>Note Category</FormLabel>
           <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
