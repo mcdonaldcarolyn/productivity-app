@@ -26,7 +26,8 @@ export default function Create() {
   const classes = useStyles()
   const history = useHistory()
   const [title, setTitle] = useState('')
-  const [details, setDetails] = useState('')
+  const [details, setDetails] = useState([])
+  
   const [titleError, setTitleError] = useState(false)
   const [detailsError, setDetailsError] = useState(false)
   const [category, setCategory] = useState('money')
@@ -86,7 +87,7 @@ export default function Create() {
         />
         <TextField className={classes.field}
           onChange={(e) => setDetails(e.target.value)}
-          label="Details"
+          label="moreDetails"
           variant="outlined"
           color="secondary"
           multiline
