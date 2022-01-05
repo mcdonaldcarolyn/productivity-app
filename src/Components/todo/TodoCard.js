@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   }
 })
 
-export default function TodoCard({ note, handleDelete, detail }) {
+export default function TodoCard({ note, handleDelete }) {
   const classes = useStyles(note)
   const [checked, setChecked] = useState([true]);
   const handleChange = (event) => {
@@ -37,7 +37,7 @@ export default function TodoCard({ note, handleDelete, detail }) {
   }
   return (
     <div>
-      <Card elevation={1}>
+       <Card elevation={1}>
         <CardHeader
           action={
             <IconButton onClick={() => handleDelete(note.id)} aria-label= "delete">
@@ -46,26 +46,17 @@ export default function TodoCard({ note, handleDelete, detail }) {
         }
           title={note.title}
           subheader={note.category}
-        />
+        /> 
         
         <CardContent>
-          <FormControlLabel
-            label={note.map((detail) => (
-            
-                
-                detail={detail}
-                
-              
-            ))}
-            control={<Checkbox checked={checked[0]} onChange={ handleChange}/>}
-          />
+                     
          
           <Typography variant="body2" color="textSecondary">
             
           </Typography>
           </CardContent>
         
-      </Card>
+      </Card> 
     </div>
          
         
